@@ -7,6 +7,8 @@ export const formatQuestion = (question) => {
     question = question.replace(/&amp;/g, '&');
     question = question.replace(/&hellip;/g, '...');
     question = question.replace(/&mdash;/g, '-');
+    question = question.replace(/&lsquo;/g, "'");
+    question = question.replace(/&rsquo;/g, "'");
     return question;
 }
 
@@ -19,6 +21,8 @@ export const formatAnswers = (answers) => {
         ans = ans.replace(/&amp;/g, '&');
         ans = ans.replace(/&hellip;/g, '...');
         ans = ans.replace(/&mdash;/g, '-');
+        ans = ans.replace(/&lsquo;/g, "'");
+        ans = ans.replace(/&rsquo;/g, "'");
     });
     return answers;
 }
@@ -30,5 +34,8 @@ export const formatCorrectAnswer = (correctAnswer) => {
     correctAnswer = correctAnswer.replace(/&amp;/g, '&');
     correctAnswer = correctAnswer.replace(/&hellip;/g, '...');
     correctAnswer = correctAnswer.replace(/&mdash;/g, '-');
+    correctAnswer = correctAnswer.replace(/&lsquo;/g, "'");
+    correctAnswer = correctAnswer.replace(/&rsquo;/g, "'");
+    
     return correctAnswer;
 }
